@@ -8,18 +8,18 @@
 
 ### Overview
 
-Sunrise Protocol is building a decentralized protocol on a dedicated Polkadot parachain. It will enable deep liquidity starting with support for the exchange of tokens on Sunrise Chain, Ethereum, and all parachains. Sunrise will support additional blockchains in the future. 
+Sunrise is building a decentralized protocol on a dedicated Polkadot parachain. We will enable deep liquidity starting with support for tokens on Sunrise Chain, Ethereum, and all parachains. Sunrise will support additional blockchains in the future. 
 
-Our Decentralized EXchange (DEX) uses a bonding curve factory which supports liquidity pools for unpegged tokens such as ETH,DOT, LINK, ACA etc. Sunrise will also support stable coin pools offering low slippage (e.g. DAI,USDT) and moving forward stable coins with different pegs (e.g. srsUSD, srsCNY).
+Our Decentralized EXchange (DEX) uses a bonding curve factory which supports liquidity pools for unpegged tokens such as ETH,DOT, LINK, ACA etc. Sunrise will support stable coin pools offering very low slippage and fees (e.g. DAI-USDT) and in the future stable coins that have different pegs (e.g. srsUSD-srsCNY).
 
 ![Sunrise Chain Vision](https://raw.githubusercontent.com/sunriseprotocol/wiki/main/assets/Sunrise%20Chain.png "Sunrise Chain")
 **Deployment**
 
-This phase of the project will be built and deployed on a parachain on Rococo. Our standalone parachain [Sunrise Protocol Daybreak](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fdaybreak.sunriseprotocol.com%3A443#/explorer) is the precursor to this. We are also evaluating the ability to deploy an Intrachain DEX (running on our partners) parachain, this will be done either publishing a DEX crate or directly contributing to partners codebase via a fork of their repository.
+The first phase of the project will be built and deployed on a parachain via Rococo. Our standalone parachain [Sunrise Protocol Daybreak](https://daybreakexplorer.sunriseprotocol.com/) will be the precursor. Sunrise is also evaluating the ability to deploy an Intrachain DEX (running on our partners) parachain, this will be done either publishing a DEX crate, updating [ORML libraries](https://github.com/open-web3-stack/open-runtime-module-library/tree/master), or directly contributing to partners codebase with a pull request to their repository.
 
 **Polkadot Ecosystem Benefits**
 
-This protocol lays the foundation for asset exchange, stable coins and advanced aggregation. This will attract the decentralized finance community, provide more liquidity and drive adoption for Polkadot. The DEX is multi-platform and bridges across parachains and as such can benefit the whole Polkadot community providing liquidity across multiple DeFi initiatives. Finally, we see there are gaps in the current DEX Approaches, this includes stable coin support, limit order functionality and compliance functionality.
+Sunrise protocol lays the foundation for the seamless exchange of assets, efficiency of stable coin transactions and advanced aggregation. Our product will attract the decentralized finance (DeFi) community and provide more liquidity that helps drive increased adoption for the Polkadot Network. The DEX is multi-platform and bridges across parachains allowing the community to access the latest protocols and initiatives. Sunrise has identified numerous gaps to capitalize on, in relation to the infrastructure of the most popular decentralized exchanges, which includes liquidity pool customization, limit order functionality and compliance functionality.
 
 **Why are we creating this project**
 
@@ -38,7 +38,7 @@ The Sunrise Decentralized Exchange (DEX) combines the use of multiple bonding cu
 
 The Sunrise DEX Factory will support the creation of Liquidity Pool Contracts.  The bonding curves for these liquidity pools, will be slightly different depending on the use case. Each exchange contract can be configured to the specific needs of the liquidity pool.
 
-##### 3.1 Sunrise Factory/Registry Contract
+#### 3.1 Sunrise Factory/Registry Contract
 
 All contracts will have a uniform interface for liquidity management and swap management. Thus abstracting away the underlying complexity from liquidity providers and traders, giving them a uniform mechanism to interact with all Sunrise liquidity pools.
 
@@ -68,7 +68,7 @@ Below is a list of the configuration parameters input into the factory contract 
 
 **There will be default values for each of these parameters based on the Bonding Curve Type.**
 
-When not utilized the variable is set to a default value, usually zero.
+When not utilized the variable will be set to a default value having a nonconsequential effect.
 
 #### Sunrise Protocol Overview
 
@@ -79,13 +79,11 @@ Sunrise Protocol is creating an open decentralized financial framework. Sunrise 
 
 Sunrise Bridge is used to create a multi-platform, multi-asset protocol using cryptocurrencies (tokens) as building blocks. We will start with Polkadot parachains, ERC-20 tokens and then other blockchains.
 
-Sunrise Chain will be implemented using a decentralized protocol on a dedicated parachain built on polkadot. 
-
 Once the primitives of a multi-platform, multi-asset DEX have been realized, decentralized financial protocols can leverage this for their liquidity needs. 
 
 Sunrise Protocol will then add limit orders, a compliance framework and smart wallet functionality to give cost effective alternatives to Centralized Exchanges and International remittances.
 
-Below are the high level modules for the Sunrise Protocol.
+Below are the high level modules that can be integrated into the Sunrise Ecosystem. A number of these will be implemented by our partners and the community, some of which may be subsidized by Sunrise Protocol grants.
 
 ![Sunrise Ecosystem](https://raw.githubusercontent.com/sunriseprotocol/wiki/main/assets/Sunrise%20Ecosystem.png "Sunrise Ecosystem")
 
@@ -181,7 +179,7 @@ This application is specific to the DEX Pallet and lays the foundation for the l
 | 0a.   | License       | Apache 2.0 |
 | 0b.   | Documentation | We will provide both inline documentation of the code and a basic tutorial that explains how a user can (for example) spin up one of our Substrate nodes. Once the node is up, it will be possible to send test transactions that will show how to create a liquidity pool and provision funds to it. |
 | 0c.   | Testing Guide | The code will have proper unit-test coverage (e.g. 90%) to ensure functionality and robustness. In the guide we will describe how to run these tests.<br />The tests will cover basic functionlity like<br />i. Creating a Liquidity Pool<br />ii. Adding and removing liquidity<br />iii. Swapping based on exact amount in and exact amount out |
-| 1. | Multi-currency Baseline | Support Multiple Currencies being traded  this may leverage the following from [FRAME](https://substrate.dev/docs/en/knowledgebase/runtime/frame)and [ORML](https://github.com/open-web3-stack/open-runtime-module-library)<br />[FRAME:support:currency trait](https://github.com/paritytech/substrate/blob/master/frame/support/src/traits.rs#L858)<br />[FRAME:pallet-balances](https://crates.io/crates/pallet-balances)<br />[orml-tokens](https://crates.io/crates/orml-tokens)<br />[orml-currencies](https://crates.io/crates/orml-currencies) |
+| 1. | Multi-currency Baseline | Support Multiple Currencies being traded this will leverage and expand upon the following from [FRAME](https://substrate.dev/docs/en/knowledgebase/runtime/frame) and [ORML](https://github.com/open-web3-stack/open-runtime-module-library)<br />[FRAME:support:currency trait](https://github.com/paritytech/substrate/blob/master/frame/support/src/traits.rs#L858)<br />[FRAME:pallet-balances](https://crates.io/crates/pallet-balances)<br />[orml-tokens](https://github.com/open-web3-stack/open-runtime-module-library/blob/master/tokens/src/lib.rs)<br />[orml-currencies](https://github.com/open-web3-stack/open-runtime-module-library/blob/master/currencies/src/lib.rs) |
 | 2. | Pallet: sunrise-dex | We will create a Pallet that will implement a simplified multi-token bonding curve.<br />We will begin prototyping with a two token pool similar to [uniswapV2Pair](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)<br />Then enhance to a multi-token-pool see [balancer as a reference implementation](https://github.com/balancer-labs/balancer-core/blob/master/contracts/BMath.sol) |
 | 3. | Substrate chain  | We will Host this on our Dawn Parachain on Rococco or our  [Daybreak Standalone Chain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fdaybreak.sunriseprotocol.com%3A443#/explorer) |
 | 4. | Docker   | We will provide a dockerfile to demonstrate the full functionality of our chain |
