@@ -166,13 +166,13 @@ This application is specific to the DEX Pallet and lays the foundation for the l
 ### Overview
 * **Total Estimated Duration:** 3 Months
 * **Full-time equivalent (FTE):**  2 FTE
-* **Total Costs:** 1 BTC
+* **Total Costs:** 0.9 BTC
 
 ### Milestone 1: Framework design and minimal DEX Pallets
 
 * Estimated Duration: 1 month
 * FTE: 2
-* Costs: 0.3 BTC
+* Costs: 0.4 BTC
 
 | Number | Deliverable | Specification |
 | ------------- | ------------- | ------------- |
@@ -192,7 +192,7 @@ This application is specific to the DEX Pallet and lays the foundation for the l
 
 * Estimated Duration: 1 month
 * FTE: 2
-* Costs: 0.4 BTC
+* Costs: 0.3 BTC
 
 
 | Number | Deliverable | Specification |
@@ -213,7 +213,7 @@ This application is specific to the DEX Pallet and lays the foundation for the l
 
 * Estimated Duration: 1 month
 * FTE: 2
-* Costs: 0.3 BTC
+* Costs: 0.2 BTC
 
 
 | Number | Deliverable | Specification |
